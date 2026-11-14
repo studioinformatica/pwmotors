@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- LOGO E TÍTULO DA APLICAÇÃO -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Logo PW Motors"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_pw_motors" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Calculadora de Viabilidade Financeira"
+            android:textColor="#134074"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Comparativo entre Compra Financiada e Locação"
+            android:textColor="#4A5568"
+            android:textSize="13sp" />
+
+        <!-- CARD 1: DADOS DO VEÍCULO -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#CBD5E0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="1. Dados do Veículo"
+                    android:textColor="#0B2545"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Campo Valor do Veículo -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Valor do Veículo (R$)"
+                    app:boxBackgroundColor="#FAFAFA"
+                    app:boxStrokeColor="#0B2545"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:hintTextColor="#0B2545">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editValorVeiculo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:text="R$ 50.000,00"
+                        android:textColor="#1A202C"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Valor de Entrada -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Valor de Entrada (R$)"
+                    app:boxBackgroundColor="#FAFAFA"
+                    app:boxStrokeColor="#0B2545"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:hintTextColor="#0B2545">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editValorEntrada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:text="R$ 10.000,00"
+                        android:textColor="#1A202C"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Select: Tipo de Veículo -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Tipo de Veículo:"
+                    android:textColor="#0B2545"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:padding="8dp" />
+
+                <!-- Select: Categoria de Veículo -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Categoria do Veículo:"
+                    android:textColor="#0B2545"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CARD 2: CENÁRIO DE UTILIZAÇÃO -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#CBD5E0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="2. Cenário de Utilização"
+                    android:textColor="#0B2545"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Campo Nº de Parcelas -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Nº de Parcelas de Financiamento (ex. 48)"
+                    app:boxBackgroundColor="#FAFAFA"
+                    app:boxStrokeColor="#0B2545"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:hintTextColor="#0B2545">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editParcelas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="48"
+                        android:textColor="#1A202C"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Período de Utilização (Meses) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="Período de Utilização em Meses (ex. 48)"
+                    app:boxBackgroundColor="#FAFAFA"
+                    app:boxStrokeColor="#0B2545"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:hintTextColor="#0B2545">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editMesesUso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="48"
+                        android:textColor="#1A202C"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo Dias de Locação por Mês -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Dias de Locação por Mês (1-31)"
+                    app:boxBackgroundColor="#FAFAFA"
+                    app:boxStrokeColor="#0B2545"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:hintTextColor="#0B2545">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editDiasPorMes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="30"
+                        android:textColor="#1A202C"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- BOTÕES PRINCIPAIS -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="8dp"
+            android:text="CALCULAR COMPARATIVO"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#0052CC"
+            app:cornerRadius="8dp"
+            app:elevation="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLimpar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="16dp"
+            android:text="LIMPAR CAMPOS"
+            android:textColor="#0B2545"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:strokeColor="#0B2545"
+            app:strokeWidth="2dp" />
+
+        <!-- CARD 3: RESULTADOS (EXIBIDO APÓS O CÁLCULO) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#0052CC"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Resultado da Comparação"
+                    android:textColor="#0B2545"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Financiamento -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opção Compra/Financiamento:"
+                    android:textColor="#1A202C"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtFinanciado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor Financiado: -"
+                    android:textColor="#4A5568" />
+
+                <TextView
+                    android:id="@+id/txtTaxaJuros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxa mensal estimada: -"
+                    android:textColor="#4A5568" />
+
+                <TextView
+                    android:id="@+id/txtParcela"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcela Mensal: -"
+                    android:textColor="#4A5568" />
+
+                <TextView
+                    android:id="@+id/txtTotalCompra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Custo Total da Compra: -"
+                    android:textColor="#0B2545"
+                    android:textStyle="bold" />
+
+                <!-- Locação -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opção Locação:"
+                    android:textColor="#1A202C"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDiaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diária Estimada: -"
+                    android:textColor="#4A5568" />
+
+                <TextView
+                    android:id="@+id/txtCustoMensalLocacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custo Mensal Locação: -"
+                    android:textColor="#4A5568" />
+
+                <TextView
+                    android:id="@+id/txtTotalLocacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Custo Total Locação: -"
+                    android:textColor="#0B2545"
+                    android:textStyle="bold" />
+
+                <!-- Conclusão -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#E2E8F0" />
+
+                <TextView
+                    android:id="@+id/txtIndicacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Na simulação, a indicação aparecerá aqui."
+                    android:textColor="#0052CC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtEconomia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Diferença Absoluta: -"
+                    android:textColor="#2D3748"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCompartilhar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="COMPARTILHAR RELATÓRIO"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#008822"
+                    app:cornerRadius="6dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
