@@ -100,7 +100,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 ## Autor
 
-Desenvolvido por **Studio Informática** (`studioinformatica`).
+Desenvolvido pelo Grupo 10 do Projeto Integrador VI.
 
 ---
 *Projeto desenvolvido para fins educacionais.*
