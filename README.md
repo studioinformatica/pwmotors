@@ -1,5 +1,5 @@
 
-# 🚗 PW Motors - Calculadora de Viabilidade Financeira Veicular
+# PW Motors - Calculadora de Viabilidade Financeira Veicular
 
 Aplicação móvel desenvolvida como **Projeto Integrador VI** do curso de **Engenharia da Computação** da **Universidade Virtual do Estado de São Paulo (UNIVESP)**, em parceria com a concessionária **PW Motors**.
 
@@ -7,14 +7,14 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 ---
 
-## 🔗 Links do Projeto
+## Links do Projeto
 
-* 📱 **Testar o Aplicativo Online (Appetize):** [Acessar Simulador Interativo](https://appetize.io)
-* 🎥 **Vídeo de Apresentação (YouTube):** [Assistir Demonstração do Projeto Integrador](https://youtube.com)
+* **Testar o Aplicativo Online (Appetize):** [Acessar Simulador Interativo](https://appetize.io)
+* **Vídeo de Apresentação (YouTube):** [Assistir Demonstração do Projeto Integrador](https://youtube.com)
 
 ---
 
-## 🎯 Funcionalidades Principais
+## Funcionalidades Principais
 
 * **Comparativo Compra x Locação:** Calcula e confronta o custo líquido final do financiamento bancário versus a assinatura mensal no mesmo horizonte de tempo.
 * **Matemática Financeira Aplicada (Tabela Price):** Processa parcelas fixas, juros compostos, valor de entrada, IPVA (4% a.a.), seguro, manutenção preventiva e depreciação acumulada do veículo.
@@ -24,7 +24,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 ---
 
-## 📊 Matriz de Parâmetros Utilizados
+## Matriz de Parâmetros Utilizados
 
 | Tipo de Veículo | Categoria Popular | Categoria Médio | Categoria Luxo |
 | :--- | :---: | :---: | :---: |
@@ -36,7 +36,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Versão Nativa Android (Este Repositório):**
   * **Linguagem:** Kotlin
@@ -48,7 +48,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 ---
 
-## 🚀 Como Executar o Projeto (Android Studio)
+## Como Executar o Projeto (Android Studio)
 
 1. **Clone este repositório:**
    ```bash
@@ -64,7 +64,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 ---
 
-## 👥 Autores e Orientação
+## Autores e Orientação
 
 **Alunos — Engenharia da Computação (UNIVESP - 2026):**
 * Aparecido da Silva (RA 2110715)
@@ -84,7 +84,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 *Relatório Técnico-Científico e Software desenvolvidos para a disciplina de Projeto Integrador VI — UNIVESP (2026).*
 
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 
 1. **Clone este repositório:**
    ```bash
@@ -98,7 +98,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
    - Conecte um dispositivo Android físico (com Depuração USB ativada) ou inicie um Emulador.
    - Clique no botão **Run** (ícone de *play* verde) na barra superior.
 
-## 👨‍💻 Autor
+## Autor
 
 Desenvolvido por **Studio Informática** (`studioinformatica`).
 
