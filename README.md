@@ -9,8 +9,8 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 ## Links do Projeto
 
-* **Testar o Aplicativo Online (Appetize):** [Acessar Simulador Interativo](https://appetize.io)
-* **Vídeo de Apresentação (YouTube):** [Assistir Demonstração do Projeto Integrador](https://youtube.com)
+* **Testar o Aplicativo Online (Appetize):** [Acessar Simulador Interativo](https://appetize.io/app/b_yqneyuskrqponmuacxfcs73r3e)
+* **Vídeo de Apresentação (YouTube):** [Assistir Demonstração do Projeto Integrador](https://www.youtube.com/watch?v=5yxocxC7u-M)
 
 ---
 
