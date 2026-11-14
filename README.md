@@ -52,7 +52,7 @@ O aplicativo auxilia consumidores e operadores comerciais na tomada de decisão 
 
 1. **Clone este repositório:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/studioinformatica/pwmotors
    ```
 2. **Abra no Android Studio:**
    * Vá em **File > Open** e selecione a pasta raiz do projeto (`CalculadoraVeiculos`).
